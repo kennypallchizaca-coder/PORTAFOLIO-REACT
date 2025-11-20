@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Centra';
+  src: url('./assets/font/CentraNo2-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Centra';
+  src: url('./assets/font/CentraNo2-Medium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Centra';
+  src: url('./assets/font/CentraNo2-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Centra', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #0b1021;
+  color: #e5e7eb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
