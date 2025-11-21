@@ -4,7 +4,6 @@ import nodemailer from "nodemailer";
 
 const router = express.Router();
 
-// Server
 const app = express();
 app.use(cors());
 app.use(express.json());

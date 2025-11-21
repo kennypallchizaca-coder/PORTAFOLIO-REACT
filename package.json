@@ -9,5 +9,12 @@
     "react-multi-carousel": "^2.8.6",
     "react-on-screen": "^2.1.1",
     "react-router-dom": "^7.9.6"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.10.1",
+    "@types/nodemailer": "^7.0.4",
+    "typescript": "^5.9.3"
   }
 }
