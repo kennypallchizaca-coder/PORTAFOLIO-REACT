@@ -1,46 +1,29 @@
-# Getting Started with Create React App
+# Portafolio multiusuario (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación React en español con secciones listas para el proyecto integrador: autenticación por rol (mock), portafolios individuales para programadores, flujos de asesoría y portafolio público con categorías Académico/Laboral.
 
-## Available Scripts
+## Tecnologías y enfoque
+- Create React App con TypeScript
+- Componentes funcionales con estado local y hooks
+- Estilos personalizados en `App.css` y uso de SVG/PNG alojados en `src/assets`
+- Datos simulados para programadores, disponibilidad y proyectos (ver `src/data/`)
 
-In the project directory, you can run:
+## Ejecutar en desarrollo
+```bash
+cd portafolio-alx
+npm install
+npm start
+```
+La app abre en [http://localhost:3000](http://localhost:3000) con recarga en caliente.
 
-### `npm start`
+## Pruebas y build
+- `npm test -- --watch=false`: ejecuta las pruebas de Create React App una sola vez.
+- `npm run build`: genera los assets optimizados en `build/`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Funcionalidades destacadas
+- **Roles:** selector de rol activo (Administrador/Programador/Usuario) para validar permisos y flujos.
+- **Panel Admin:** alta de programadores con enlaces y disponibilidad; métricas de proyectos y asesorías.
+- **Portafolios:** selector de programador con proyectos separados por secciones Académico y Laboral; formulario para registrar nuevos proyectos según el rol.
+- **Asesorías:** formulario para solicitar asesoría, horarios por programador y panel para aprobar/rechazar solicitudes (estado global en contexto).
+- **Proyectos:** tarjetas con participación, tecnologías, repositorio y demo, agrupadas por categoría.
+- **Contacto:** formulario listo para conectarse a un backend; puedes usar `../server.ts` con Nodemailer configurando `EMAIL_USER` y `EMAIL_PASS`.
