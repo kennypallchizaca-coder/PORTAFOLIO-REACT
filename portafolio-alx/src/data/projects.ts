@@ -5,21 +5,36 @@ import { Project } from '../types';
 
 export const projects: Project[] = [
   {
-    title: 'Panel de analítica',
-    description: 'SPA con React + TypeScript y dashboards en tiempo real.',
+    title: 'Portal multiusuario',
+    description: 'Autenticación con Google, panel de administrador y portafolios por programador.',
+    participation: 'Fullstack',
+    technologies: ['Angular', 'Firebase Auth', 'Firestore'],
     imgUrl: projImg1,
-    url: 'https://example.com/dashboard'
+    repoUrl: 'https://github.com/example/multiusuario',
+    demoUrl: 'https://multiusuario.web.app',
+    url: 'https://multiusuario.web.app',
+    category: 'Laboral'
   },
   {
-    title: 'Landing de producto',
-    description: 'Sitio responsivo optimizado para conversión y SEO técnico.',
+    title: 'Agendador de asesorías',
+    description: 'Flujo de selección de programador, horario y aprobación con notificaciones.',
+    participation: 'Backend',
+    technologies: ['Express', 'MongoDB', 'Cloud Functions'],
     imgUrl: projImg2,
-    url: 'https://example.com/landing'
+    repoUrl: 'https://github.com/example/asesorias',
+    demoUrl: 'https://asesorias.web.app',
+    url: 'https://asesorias.web.app',
+    category: 'Académico'
   },
   {
-    title: 'Gestor de tareas',
-    description: 'Aplicación fullstack con autenticación y modo offline.',
+    title: 'SEO landing programadores',
+    description: 'Página pública de portafolios individuales con buenas prácticas de SEO.',
+    participation: 'Frontend',
+    technologies: ['Angular', 'SCSS', 'Vercel'],
     imgUrl: projImg3,
-    url: 'https://example.com/tasks'
+    repoUrl: 'https://github.com/example/seo-portafolios',
+    demoUrl: 'https://portafolios-seo.vercel.app',
+    url: 'https://portafolios-seo.vercel.app',
+    category: 'Laboral'
   }
 ];

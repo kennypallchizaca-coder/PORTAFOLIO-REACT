@@ -6,7 +6,11 @@ import navIcon3 from '../assets/font/img/nav-icon3.svg';
 
 const links = [
   { id: 'home', label: 'Inicio' },
+  { id: 'roles', label: 'Roles' },
+  { id: 'admin', label: 'Admin' },
   { id: 'skills', label: 'Habilidades' },
+  { id: 'portafolios', label: 'Portafolios' },
+  { id: 'asesorias', label: 'Asesorías' },
   { id: 'projects', label: 'Proyectos' },
   { id: 'contact', label: 'Contacto' }
 ];
