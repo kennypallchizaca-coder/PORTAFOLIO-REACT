@@ -1,0 +1,245 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: center;
+}
+
+.kicker {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  margin: 0;
+}
+
+.hero h1 {
+  margin: 8px 0;
+  font-size: clamp(32px, 4vw, 42px);
+}
+
+.subtitle {
+  color: var(--accent);
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.description {
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #38bdf8, #7c3aed);
+  color: #0b1224;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.35);
+}
+
+.btn.ghost {
+  border-color: rgba(255, 255, 255, 0.16);
+  color: var(--text);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.section {
+  background: linear-gradient(145deg, rgba(19, 27, 49, 0.95), rgba(14, 21, 40, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+.section-head h2 {
+  margin: 0;
+}
+
+.section-head .muted {
+  margin: 8px 0 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.card {
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.project .badge {
+  display: inline-flex;
+  padding: 4px 10px;
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--accent);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.project h3 {
+  margin: 10px 0 6px;
+}
+
+.project .tech {
+  margin: 12px 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.links {
+  display: flex;
+  gap: 12px;
+}
+
+.links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.links a:hover {
+  color: var(--accent);
+}
+
+.section--highlight {
+  border: 1px solid rgba(125, 211, 252, 0.35);
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  display: grid;
+  gap: 10px;
+}
+
+.highlights li {
+  padding: 12px 14px;
+  background: rgba(125, 211, 252, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(125, 211, 252, 0.3);
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.section--contact .form {
+  display: grid;
+  gap: 18px;
+}
+
+.field-group {
+  display: grid;
+  gap: 10px;
+}
+
+.field-group label {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.double {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid rgba(125, 211, 252, 0.5);
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.status {
+  margin: 0;
+  font-weight: 600;
+}
+
+.status.success {
+  color: #4ade80;
+}
+
+.status.error {
+  color: #f87171;
+}
+
+.bubble {
+  justify-self: end;
+  min-width: 220px;
+  padding: 16px;
+  border-radius: 16px;
+  background: radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.4), rgba(14, 165, 233, 0.35));
+  color: #0b1224;
+  font-weight: 700;
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.35);
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 32px 16px;
+  }
+
+  .hero {
+    text-align: left;
+  }
+}
