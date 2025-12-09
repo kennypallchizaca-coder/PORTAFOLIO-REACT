@@ -1,0 +1,23 @@
+:root {
+  --bg: #0b1224;
+  --card: #131b31;
+  --accent: #7dd3fc;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 20%, #0f172a, #0b1224 45%), #0b1224;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a { color: inherit; }
+
+button {
+  font-family: inherit;
+}

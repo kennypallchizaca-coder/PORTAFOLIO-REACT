@@ -1,0 +1,133 @@
+<main class="page">
+  <header class="hero">
+    <div>
+      <p class="kicker">Portafolio en Angular</p>
+      <h1>{{ hero.title }}</h1>
+      <p class="subtitle">{{ hero.subtitle }}</p>
+      <p class="description">{{ hero.description }}</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">Ver proyectos</a>
+        <a class="btn ghost" href="#skills">{{ hero.cta }}</a>
+      </div>
+    </div>
+    <div class="bubble">
+      <p>Standalone</p>
+      <p>Router listo</p>
+      <p>Animaciones</p>
+    </div>
+  </header>
+
+  <section id="skills" class="section">
+    <div class="section-head">
+      <h2>Stack principal</h2>
+      <p class="muted">Tecnologías listas para migrar los componentes de React.</p>
+    </div>
+    <div class="grid">
+      <article class="card" *ngFor="let group of skillGroups">
+        <p class="muted">{{ group.title }}</p>
+        <h3>{{ group.skills.join(' · ') }}</h3>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-head">
+      <h2>Proyectos destacados</h2>
+      <p class="muted">Basados en el portafolio original para validar la migración.</p>
+    </div>
+    <div class="grid projects">
+      <article class="card project" *ngFor="let project of projects">
+        <div class="badge">{{ project.category }}</div>
+        <h3>{{ project.title }}</h3>
+        <p class="muted">{{ project.participation }}</p>
+        <p>{{ project.description }}</p>
+        <p class="tech">{{ project.technologies.join(' · ') }}</p>
+        <div class="links">
+          <a [href]="project.demoUrl" target="_blank" rel="noreferrer">Demo</a>
+          <a [href]="project.repoUrl" target="_blank" rel="noreferrer">Código</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--highlight">
+    <div class="section-head">
+      <h2>Qué cambia con Angular</h2>
+      <p class="muted">Estructura mínima lista para seguir migrando vistas y servicios.</p>
+    </div>
+    <ul class="highlights">
+      <li *ngFor="let item of highlights">{{ item }}</li>
+    </ul>
+    <div class="cta-row">
+      <a class="btn primary" href="mailto:contacto@example.com">Agendar demo</a>
+      <a class="btn ghost" href="https://angular.dev/guide/standalone-components" target="_blank" rel="noreferrer">Ver guía</a>
+    </div>
+  </section>
+
+  <section id="contact" class="section section--contact">
+    <div class="section-head">
+      <h2>Contacto</h2>
+      <p class="muted">Formulario conectado al endpoint Express (`/contact`) para probar el flujo real.</p>
+    </div>
+
+    <form #contactForm="ngForm" class="card form" (ngSubmit)="submitContact(contactForm)">
+      <div class="field-group">
+        <label>Nombre</label>
+        <div class="double">
+          <input
+            type="text"
+            name="firstName"
+            [(ngModel)]="contact.firstName"
+            required
+            placeholder="Nombre"
+          />
+          <input
+            type="text"
+            name="lastName"
+            [(ngModel)]="contact.lastName"
+            required
+            placeholder="Apellidos"
+          />
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Correo y teléfono</label>
+        <div class="double">
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="contact.email"
+            required
+            placeholder="correo@ejemplo.com"
+          />
+          <input
+            type="tel"
+            name="phone"
+            [(ngModel)]="contact.phone"
+            placeholder="WhatsApp / teléfono"
+          />
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label>Mensaje</label>
+        <textarea
+          name="message"
+          [(ngModel)]="contact.message"
+          rows="4"
+          required
+          placeholder="Cuéntame sobre tu proyecto o asesoría"
+        ></textarea>
+      </div>
+
+      <div class="form-footer">
+        <button class="btn primary" type="submit" [disabled]="isSubmitting">
+          {{ isSubmitting ? 'Enviando…' : 'Enviar mensaje' }}
+        </button>
+        <p *ngIf="submitStatus === 'success'" class="status success">¡Mensaje enviado!</p>
+        <p *ngIf="submitStatus === 'error'" class="status error">No se pudo enviar, intenta de nuevo.</p>
+      </div>
+    </form>
+  </section>
+</main>
